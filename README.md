@@ -354,4 +354,5 @@ Your portfolio website is **production-ready** with:
 ---
 
 **Built with ❤️ by A₹UN $HEKHAR**  
-*IIT Jodhpur AI & Data Science Student* 
+*IIT Jodhpur AI & Data Science Student* #   I I T - A I - W D S I T E  
+ 
