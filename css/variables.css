@@ -1,0 +1,222 @@
+/* ============================================ */
+/* CSS CUSTOM PROPERTIES (VARIABLES) */
+/* A₹UN $HEKHAR Portfolio - Color Scheme */
+/* ============================================ */
+
+:root {
+  /* ============================================ */
+  /* PRIMARY BRAND COLORS */
+  /* ============================================ */
+  --portfolio-accent: #00bcd4;           /* Main cyan - Navigation hover, buttons, highlights */
+  --portfolio-accent-alpha: #00bcd420;   /* Transparent cyan - Borders, subtle backgrounds */
+  --portfolio-secondary: #e91e63;        /* Pink - Secondary accents, social media */
+  --portfolio-tertiary: #ff9800;         /* Orange - Tech stack items, project tags */
+  
+  /* ============================================ */
+  /* BACKGROUND COLORS */
+  /* ============================================ */
+  --portfolio-bg: #0a0a0a;               /* Main dark background */
+  --portfolio-bg-secondary: #1a1a2e;     /* Cards, sections background */
+  --portfolio-bg-tertiary: #16213e;      /* Navigation, footer background */
+  
+  /* ============================================ */
+  /* TEXT COLORS */
+  /* ============================================ */
+  --portfolio-text: #ffffff;             /* Main text color */
+  --portfolio-text-secondary: #b0b0b0;   /* Secondary text, descriptions */
+  --portfolio-text-muted: #666666;       /* Subtle text, timestamps */
+  
+  /* ============================================ */
+  /* SHADOW & GLOW EFFECTS */
+  /* ============================================ */
+  --portfolio-shadow: rgba(0, 188, 212, 0.2);    /* Light shadow */
+  --portfolio-shadow-medium: rgba(0, 188, 212, 0.4);   /* Medium shadow */
+  --portfolio-shadow-heavy: rgba(0, 188, 212, 0.6);    /* Heavy shadow */
+  --portfolio-glow: rgba(0, 188, 212, 0.8);      /* Glow effect */
+  
+  /* ============================================ */
+  /* GRADIENT COMBINATIONS */
+  /* ============================================ */
+  --portfolio-gradient-main: linear-gradient(45deg, #00bcd4, #e91e63, #ff9800);
+  --portfolio-gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  --portfolio-gradient-hero: linear-gradient(135deg, #00bcd4 0%, #9c27b0 50%, #e91e63 100%);
+  --portfolio-gradient-button: linear-gradient(45deg, #00bcd4, #0097a7);
+  --portfolio-gradient-card: linear-gradient(135deg, #00bcd420, #e91e6320);
+  
+  /* ============================================ */
+  /* SOCIAL MEDIA GRADIENTS */
+  /* ============================================ */
+  --portfolio-gradient-instagram: linear-gradient(45deg, #9c27b0, #e91e63);
+  --portfolio-gradient-github: linear-gradient(45deg, #333333, #000000);
+  --portfolio-gradient-portfolio: linear-gradient(45deg, #00bcd4, #0097a7);
+  
+  /* ============================================ */
+  /* ANIMATION & PARTICLE COLORS */
+  /* ============================================ */
+  --particle-cyan: #00bcd4;              /* Cyan particles */
+  --particle-pink: #e91e63;              /* Pink particles */
+  --particle-orange: #ff9800;            /* Orange particles */
+  --particle-purple: #9c27b0;            /* Purple particles */
+  --particle-green: #4caf50;             /* Green particles */
+  --particle-red: #f44336;               /* Red particles */
+  
+  /* ============================================ */
+  /* WAVE COLORS */
+  /* ============================================ */
+  --wave-horizontal: #00bcd4;            /* Cyan horizontal waves */
+  --wave-vertical: #e91e63;              /* Pink vertical waves */
+  --wave-diagonal: #ff9800;              /* Orange diagonal waves */
+  
+  /* ============================================ */
+  /* 3D SHAPE COLORS */
+  /* ============================================ */
+  --shape-cube: #00bcd4;                 /* Cyan rotating cube */
+  --shape-sphere: #e91e63;               /* Pink pulsing sphere */
+  --shape-pyramid: #ff9800;              /* Orange spinning pyramid */
+  --shape-ring: #9c27b0;                 /* Purple wobbling ring */
+  --shape-hexagon: #4caf50;              /* Green flipping hexagon */
+  --shape-diamond: #f44336;              /* Red sparkling diamond */
+  
+  /* ============================================ */
+  /* TECH STACK COLORS */
+  /* ============================================ */
+  --tech-python: #3776AB;                /* Python logo color */
+  --tech-ai: #FF6B6B;                    /* AI/ML red */
+  --tech-data-science: #4ECDC4;          /* Data Science teal */
+  --tech-javascript: #F7DF1E;            /* JavaScript yellow */
+  --tech-react: #61DAFB;                 /* React blue */
+  --tech-tensorflow: #FF9500;            /* TensorFlow orange */
+  --tech-pandas: #150458;                /* Pandas dark blue */
+  --tech-numpy: #013243;                 /* NumPy dark teal */
+  --tech-git: #F05032;                   /* Git orange-red */
+  --tech-github: #333333;                /* GitHub dark */
+  --tech-jupyter: #F37626;               /* Jupyter orange */
+  --tech-webdev: #00D9FF;                /* Web development cyan */
+  
+  /* ============================================ */
+  /* CURSOR COLORS */
+  /* ============================================ */
+  --cursor-default: #00bcd4;             /* Default cursor color */
+  --cursor-hover: #e91e63;               /* Hover state color */
+  --cursor-click: #ff9800;               /* Click state color */
+  --cursor-trail: #00bcd440;             /* Trail effect color */
+  
+  /* ============================================ */
+  /* NAVIGATION COLORS */
+  /* ============================================ */
+  --nav-background: rgba(26, 26, 46, 0.9);       /* Navigation background */
+  --nav-text: #ffffff;                            /* Navigation text */
+  --nav-hover: #00bcd4;                           /* Navigation hover */
+  --nav-active: #e91e63;                          /* Active navigation item */
+  --nav-mobile: rgba(10, 10, 10, 0.95);          /* Mobile menu background */
+  
+  /* ============================================ */
+  /* COMPONENT COLORS */
+  /* ============================================ */
+  --btn-primary: #00bcd4;                /* Primary buttons */
+  --btn-secondary: #e91e63;              /* Secondary buttons */
+  --btn-success: #4caf50;                /* Success buttons */
+  --btn-warning: #ff9800;                /* Warning buttons */
+  --btn-danger: #f44336;                 /* Danger buttons */
+  
+  /* ============================================ */
+  /* BORDER COLORS */
+  /* ============================================ */
+  --border-default: #00bcd420;           /* Default borders */
+  --border-hover: #00bcd4;               /* Hover state borders */
+  --border-focus: #e91e63;               /* Focus state borders */
+  
+  /* ============================================ */
+  /* SPACING & SIZES */
+  /* ============================================ */
+  --spacing-xs: 0.25rem;                 /* 4px */
+  --spacing-sm: 0.5rem;                  /* 8px */
+  --spacing-md: 1rem;                    /* 16px */
+  --spacing-lg: 1.5rem;                  /* 24px */
+  --spacing-xl: 2rem;                    /* 32px */
+  --spacing-2xl: 3rem;                   /* 48px */
+  --spacing-3xl: 4rem;                   /* 64px */
+  
+  /* ============================================ */
+  /* FONT WEIGHTS */
+  /* ============================================ */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  
+  /* ============================================ */
+  /* BORDER RADIUS */
+  /* ============================================ */
+  --radius-sm: 0.375rem;                 /* 6px */
+  --radius-md: 0.5rem;                   /* 8px */
+  --radius-lg: 0.75rem;                  /* 12px */
+  --radius-xl: 1rem;                     /* 16px */
+  --radius-2xl: 1.25rem;                 /* 20px */
+  --radius-full: 9999px;                 /* Full rounded */
+  
+  /* ============================================ */
+  /* ANIMATION DURATIONS */
+  /* ============================================ */
+  --duration-fast: 0.15s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+  --duration-slower: 1s;
+  
+  /* ============================================ */
+  /* Z-INDEX LAYERS */
+  /* ============================================ */
+  --z-background: -2;
+  --z-background-shapes: -1;
+  --z-content: 1;
+  --z-navigation: 1000;
+  --z-overlay: 2000;
+  --z-cursor: 9999;
+}
+
+/* ============================================ */
+/* LIGHT THEME OVERRIDES */
+/* ============================================ */
+.light {
+  --portfolio-bg: #ffffff;
+  --portfolio-bg-secondary: #f8f9fa;
+  --portfolio-bg-tertiary: #e9ecef;
+  --portfolio-text: #2c3e50;
+  --portfolio-text-secondary: #495057;
+  --portfolio-text-muted: #6c757d;
+  --nav-background: rgba(248, 249, 250, 0.9);
+  --nav-text: #2c3e50;
+}
+
+/* ============================================ */
+/* DARK THEME (DEFAULT) */
+/* ============================================ */
+.dark {
+  /* Already defined in :root */
+}
+
+/* ============================================ */
+/* HIGH CONTRAST MODE */
+/* ============================================ */
+@media (prefers-contrast: high) {
+  :root {
+    --portfolio-text: #ffffff;
+    --portfolio-bg: #000000;
+    --portfolio-accent: #00ffff;
+    --portfolio-secondary: #ff00ff;
+  }
+}
+
+/* ============================================ */
+/* REDUCED MOTION */
+/* ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0s;
+    --duration-normal: 0s;
+    --duration-slow: 0s;
+    --duration-slower: 0s;
+  }
+}

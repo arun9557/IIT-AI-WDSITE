@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A₹UN $HEKHAR - AI & Data Science Portfolio</title>
+    <meta name="description" content="A₹UN $HEKHAR - IIT Jodhpur B.Sc Applied AI & Data Science student portfolio. Showcasing AI projects, handwritten notes, and coding journey.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        :root {
+            --background: hsl(240, 10%, 3.9%);
+            --foreground: hsl(0, 0%, 98%);
+            --muted: hsl(240, 3.7%, 15.9%);
+            --muted-foreground: hsl(240, 5%, 64.9%);
+            --popover: hsl(240, 10%, 3.9%);
+            --popover-foreground: hsl(0, 0%, 98%);
+            --card: hsl(240, 10%, 3.9%);
+            --card-foreground: hsl(0, 0%, 98%);
+            --border: hsl(240, 3.7%, 15.9%);
+            --input: hsl(240, 3.7%, 15.9%);
+            --primary: hsl(207, 90%, 54%);
+            --primary-foreground: hsl(211, 100%, 99%);
+            --secondary: hsl(240, 3.7%, 15.9%);
+            --secondary-foreground: hsl(0, 0%, 98%);
+            --accent: hsl(240, 3.7%, 15.9%);
+            --accent-foreground: hsl(0, 0%, 98%);
+            --destructive: hsl(0, 62.8%, 30.6%);
+            --destructive-foreground: hsl(0, 0%, 98%);
+            --ring: hsl(240, 4.9%, 83.9%);
+            --radius: 0.5rem;
+            --portfolio-bg: hsl(215, 28%, 17%);
+            --portfolio-secondary: hsl(215, 25%, 27%);
+            --portfolio-text: hsl(210, 40%, 82%);
+            --portfolio-accent: hsl(186, 100%, 59%);
+            --portfolio-accent-secondary: hsl(327, 73%, 68%);
+            --portfolio-accent-alpha: hsla(186, 100%, 59%, 0.2);
+            --portfolio-shadow: hsla(186, 100%, 59%, 0.3);
+        }
+
+        .tech-stack-heading {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 8rem;
+            background: linear-gradient(45deg, #00bcd4, #e91e63, #ff9800);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease infinite;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            cursor: default;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .tech-stack-heading {
+                font-size: 4.5rem;
+            }
+        }
+
+        .hero-name {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin-top: 6rem;
+            margin-bottom: 2rem;
+        }
+
+        .name-glow-bg {
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            background-image: linear-gradient(to right, #22d3ee, #a855f7, #ec4899);
+            filter: blur(64px);
+            opacity: 0.28;
+            transform: scale(1.14);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .animated-name,
+        .animated-name-sub {
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            background: linear-gradient(45deg, #00bcd4, #e91e63, #ff9800, #00bcd4);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+            filter: drop-shadow(0 8px 32px rgba(0, 188, 212, 0.18));
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+            text-align: center;
+            line-height: 1.1;
+        }
+
+        .animated-name {
+            font-size: 7rem;
+            margin-bottom: 0;
+        }
+
+        .animated-name-sub {
+            font-size: 0.7em;
+            margin-top: 0.2em;
+        }
+
+        .hero-tagline {
+            margin-top: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.25rem;
+            color: var(--portfolio-text, #dbeafe);
+            text-align: center;
+            line-height: 1.6;
+            font-weight: 500;
+            opacity: 0.85;
+            background: rgba(10, 10, 20, 0.15);
+            border-radius: 1rem;
+            padding: 1.2rem 2rem;
+            box-shadow: 0 2px 16px 0 rgba(0,188,212,0.08);
+        }
+
+        .hero-tagline strong {
+            color: #00bcd4;
+            font-weight: 700;
+            font-size: 1.1em;
+            letter-spacing: 0.01em;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media (max-width: 768px) {
+            .animated-name {
+                font-size: 3.5rem;
+            }
+        }
+
+        .relative-z10 {
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-section-centered {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-name {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Background Animations -->
+    <canvas class="background-canvas" id="particleCanvas"></canvas>
+    
+    <div class="floating-shapes">
+        <div class="shape cube-3d" style="top: 20%; left: 10%;"></div>
+        <div class="shape sphere-3d" style="top: 60%; right: 15%;"></div>
+        <div class="shape pyramid-3d" style="top: 30%; right: 30%;"></div>
+        <div class="shape ring-3d" style="bottom: 30%; left: 20%;"></div>
+        <div class="shape hexagon-3d" style="top: 70%; left: 70%;"></div>
+        <div class="shape diamond-3d" style="bottom: 20%; right: 40%;"></div>
+    </div>
+
+    <div class="wave-lines">
+        <div class="wave wave-horizontal" style="top: 20%;"></div>
+        <div class="wave wave-horizontal" style="top: 60%;"></div>
+        <div class="wave wave-vertical" style="left: 30%;"></div>
+        <div class="wave wave-vertical" style="right: 25%;"></div>
+        <div class="wave wave-diagonal" style="top: 40%; left: -50%;"></div>
+    </div>
+
+    <!-- Intro Overlay -->
+    <div class="intro-overlay" id="introOverlay">
+        <div class="intro-content">
+            <h1 class="intro-title">A₹UN $HEKHAR</h1>
+            <p class="intro-text">Welcome to my AI & Data Science Portfolio</p>
+            <div class="typing-container" id="typingText">IIT Jodhpur Student | AI Enthusiast | Future Data Scientist</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">A₹UN $HEKHAR</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+                <div class="mobile-menu-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section-centered">
+        <div class="hero-name">
+            <div class="name-glow-bg"></div>
+            <span class="animated-name custom-arun">
+                A₹UN<br>
+                <span class="animated-name-sub">SHEKHAR</span>
+            </span>
+            <div class="hero-tagline" style="margin-top: 1.5rem;">
+                <strong>AI &amp; Data Science Student | Coding Enthusiast</strong>
+            </div>
+            <p class="hero-tagline">
+                Currently pursuing B.Sc Applied AI &amp; Data Science from IIT Jodhpur (Online Program). Fresh 12th grade graduate passionate about AI, coding, and sharing knowledge through handwritten notes, GitHub projects, and innovative web experiences like this AI-powered website.
+            </p>
+            <div class="hero-btn-row" style="display:flex; flex-direction:row; gap:1.5rem; justify-content:center; margin:2rem 0;">
+                <a href="#projects" class="btn-hover">View My Work</a>
+                <a href="/resume.pdf" download class="btn-hover">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title gradient-text">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        <span class="highlight">IIT Jodhpur</span> B.Sc Applied AI & Data Science student.<br>
+                        Passionate about <span class="highlight">AI</span>, <span class="highlight">coding</span>, and <span class="highlight">knowledge sharing</span>.
+                    </p>
+                    <p>
+                        Documenting my journey with handwritten notes and real-world projects.
+                    </p>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🎓</div>
+                        <div class="highlight-title">Education</div>
+                        <div class="highlight-desc">IIT Jodhpur<br>B.Sc Applied AI & Data Science</div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">📝</div>
+                        <div class="highlight-title">Specialization</div>
+                        <div class="highlight-desc">Handwritten Notes<br>Knowledge Sharing</div>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">🚀</div>
+                        <div class="highlight-title">Focus</div>
+                        <div class="highlight-desc">AI Development<br>Data Science Projects</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="section" id="tech">
+        <h2 class="tech-stack-heading">Tech Stack</h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <div class="tech-logo tech-python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-name">Python</div>
+                <div class="tech-description">Primary programming language for AI/ML</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-ai">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="tech-name">AI/ML</div>
+                <div class="tech-description">Machine Learning algorithms and models</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-data-science">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="tech-name">Data Science</div>
+                <div class="tech-description">Data analysis and visualization</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-tensorflow">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="tech-name">TensorFlow</div>
+                <div class="tech-description">Deep learning framework</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-javascript">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="tech-name">JavaScript</div>
+                <div class="tech-description">Web development and interactivity</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-react">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="tech-name">React</div>
+                <div class="tech-description">Frontend library for web apps</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-git">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <div class="tech-name">Git</div>
+                <div class="tech-description">Version control system</div>
+            </div>
+            <div class="tech-item">
+                <div class="tech-logo tech-github">
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="tech-name">GitHub</div>
+                <div class="tech-description">Code repository and collaboration</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <h2 class="section-title">Projects & Work</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="project-title">Handwritten Notes Collection</h3>
+                </div>
+                <p class="project-description">
+                    Comprehensive handwritten notes covering AI, Data Science, and Mathematics topics. Shared with fellow students to help in their learning journey.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Education</span>
+                    <span class="project-tag">AI/ML</span>
+                    <span class="project-tag">Mathematics</span>
+                    <span class="project-tag">Study Material</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/arun9557/IIT-JODHPU-AI-" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Repository
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="project-title">AI Learning Projects</h3>
+                </div>
+                <p class="project-description">
+                    Collection of AI and Machine Learning projects developed during my IIT Jodhpur coursework. Includes algorithms implementation and real-world applications.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">AI/ML</span>
+                    <span class="project-tag">TensorFlow</span>
+                    <span class="project-tag">Data Science</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/arun9557/IIT-JODHPU-AI-" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="project-title">Portfolio Website</h3>
+                </div>
+                <p class="project-description">
+                    Modern, animated portfolio website built with React and 3D animations. Features particle systems, geometric shapes, and interactive elements.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">JavaScript</span>
+                    <span class="project-tag">3D Animation</span>
+                    <span class="project-tag">Web Design</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://my-portfolio-kappa-five-34.vercel.app" class="project-link" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="project-title">Knowledge Sharing Platform</h3>
+                </div>
+                <p class="project-description">
+                    Platform for sharing educational content, study materials, and connecting with fellow AI & Data Science students. Focus on collaborative learning.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Education</span>
+                    <span class="project-tag">Community</span>
+                    <span class="project-tag">Open Source</span>
+                    <span class="project-tag">Collaboration</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/arun9557/IIT-JODHPU-AI-" class="project-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Contribute
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p>
+                    मैं हमेशा नए opportunities और collaborations के लिए open हूँ। Whether आप एक fellow student हैं, एक mentor ढूंढ रहे हैं, या simply AI और Data Science के बारे में discuss करना चाहते हैं - feel free to reach out!
+                </p>
+                <p>
+                    मैं especially interested हूँ in:
+                    <br>• AI/ML project collaborations
+                    <br>• Study group formations
+                    <br>• Knowledge sharing initiatives
+                    <br>• Open source contributions
+                </p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/arunshekhar.in?igsh=ZnZ0eXA4ZjAyY3dj" class="social-link social-instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </a>
+                    <a href="https://github.com/arun9557/IIT-JODHPU-AI-" class="social-link social-github" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://my-portfolio-kappa-five-34.vercel.app" class="social-link social-portfolio" target="_blank">
+                        <i class="fas fa-globe"></i>
+                        Portfolio
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Files -->
+    <script src="js/particles.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
